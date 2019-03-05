@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/no-danger */
 import { h, render, Component } from "preact";
+import css from "./tablo.css";
 /** @jsx h */
 import { getAge } from "./datehelper";
 
