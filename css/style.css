@@ -1,0 +1,68 @@
+#tablo {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#tablo .entry {
+  width: 50%;
+  box-shadow: 0 0 10px 0 rgba(186,186,186,0.5);
+  height: 60px;
+  max-height: 60px;
+  transition: transform 0.3s, max-height 0.3s;
+  padding: 5px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#tablo .entry:hover {
+  cursor: pointer;
+  transform: translateY(-3px);
+}
+
+#tablo .entry-arrow {
+  font-size: 2em;
+}
+
+#tablo .entry-img {
+  width: 50px;
+  max-height: 50px;
+}
+
+#tablo .entry-info {
+  width: 70%;
+}
+
+#tablo .entry-name {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+#tablo .entry-blurb, #tablo .entry-age {
+  font-size: 0.9em;
+  color: grey;
+}
+
+#tablo .entry-desc {
+  font-size: 0.9em;
+}
+
+@media only screen and (max-width: 620px) {
+  #tablo .entry {
+    width: 100%;
+  }
+
+  #tablo .entry-desc {
+    font-size: 0.875em;
+  }
+
+  #tablo .entry-arrow {
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  #tablo .entry-name {
+    font-size: 0.9em;
+  }
+}
