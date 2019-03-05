@@ -21,7 +21,7 @@ const Entry = ({
             <div className="entry-age">{`${getAge(candidate.dob)} let`}</div>
             <div className="entry-desc" dangerouslySetInnerHTML={{ __html: candidate.desc }} />
           </div>
-          <div className="entry-arrow">⮝</div>
+          <div className="entry-arrow-up">⌃</div>
         </div>
       )
       : (
@@ -31,7 +31,7 @@ const Entry = ({
             <div className="entry-name">{candidate.name}</div>
             <div className="entry-blurb">{candidate.blurb}</div>
           </div>
-          <div className="entry-arrow">⮟</div>
+          <div className="entry-arrow-down">⌄</div>
         </div>
       )
   );
@@ -58,7 +58,6 @@ class Tablo extends Component {
 
   loadData() {
     const { initCand } = this.state;
-    console.log(initCand);
     const xhr = new XMLHttpRequest();
     const url = "https://data.irozhlas.cz/us-prezident-kandidati/data/data.json";
     xhr.open("get", url, true);
@@ -66,7 +65,10 @@ class Tablo extends Component {
       const data = JSON.parse(xhr.responseText);
       const prioCand = data.filter(item => item.name === initCand);
       if (prioCand.length === 1) {
-        this.setState({ data: prioCand.concat(data.filter(item => item.name !== initCand)), selectedCand: 0 });
+        this.setState({
+          data: prioCand.concat(data.filter(item => item.name !== initCand)),
+          selectedCand: 0,
+        });
       } else {
         this.setState({ data });
       }

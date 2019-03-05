@@ -1,6 +1,8 @@
 #tablo {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 #tablo .entry {
@@ -20,10 +22,18 @@
   transform: translateY(-3px);
 }
 
-#tablo .entry-arrow {
+#tablo .entry-arrow-up {
   font-size: 2em;
   color: gray;
+  margin-top: 7px;
 }
+
+#tablo .entry-arrow-down {
+  font-size: 2em;
+  color: gray;
+  margin-top: -6px;
+}
+
 
 #tablo .entry-img {
   width: 50px;
