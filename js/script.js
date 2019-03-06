@@ -108,15 +108,18 @@ class Tablo extends Component {
     const { selectedCand, data } = this.state;
 
     return (
-      <div id="tablo">
-        {data.map((candidate, candId) => (
-          <Entry
-            candidate={candidate}
-            id={candId}
-            visible={selectedCand === candId}
-            handleClick={this.handleEntryClick}
-          />
-        ))}
+      <div>
+        <h3>Vyzyvatelé Donalda Trumpa</h3>
+        <div id="tablo">
+          {data.map((candidate, candId) => (
+            <Entry
+              candidate={candidate}
+              id={candId}
+              visible={selectedCand === candId}
+              handleClick={this.handleEntryClick}
+            />
+          ))}
+        </div>
       </div>
     );
   }
