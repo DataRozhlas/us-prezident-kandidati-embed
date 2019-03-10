@@ -14,7 +14,7 @@ const Entry = ({
     visible
       ? (
         <div className="entry" style={{ height: "auto", "max-height": "1000px" }} role="button" tabIndex="0" onClick={() => handleClick(id)}>
-          <img className="entry-img" alt={candidate.name} src={`http://data.irozhlas.cz/us-prezident-kandidati/fotky/${imgName}`} />
+          <img className="entry-img" alt={candidate.name} src={`https://data.irozhlas.cz/us-prezident-kandidati/fotky/${imgName}`} />
           <div className="entry-info">
             <div className="entry-name">{candidate.name}</div>
             <div className="entry-blurb">{candidate.blurb}</div>
@@ -26,7 +26,7 @@ const Entry = ({
       )
       : (
         <div className="entry" role="button" tabIndex="0" onClick={() => handleClick(id)}>
-          <img className="entry-img" alt={candidate.name} src={`http://data.irozhlas.cz/us-prezident-kandidati/fotky/${imgName}`} />
+          <img className="entry-img" alt={candidate.name} src={`https://data.irozhlas.cz/us-prezident-kandidati/fotky/${imgName}`} />
           <div className="entry-info">
             <div className="entry-name">{candidate.name}</div>
             <div className="entry-blurb">{candidate.blurb}</div>
