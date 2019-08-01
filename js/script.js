@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
+﻿/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/no-danger */
 import { h, render, Component } from "preact";
 import css from "./tablo.css";
@@ -26,7 +26,7 @@ const Entry = ({
       )
       : (
         <div className="entry" role="button" tabIndex="0" onClick={() => handleClick(id)}>
-          <img className="entry-img" alt={candidate.name} src={`https://data.irozhlas.cz/us-prezident-kandidati/fotky/${imgName}`} />
+          <img className="entry-img" alt={candidate.name} src={`https://datarozhlas.s3.eu-central-1.amazonaws.com/us-prezident-kandidati/fotky/${imgName}`} />
           <div className="entry-info">
             <div className="entry-name">{candidate.name}</div>
             <div className="entry-blurb">{candidate.blurb}</div>
